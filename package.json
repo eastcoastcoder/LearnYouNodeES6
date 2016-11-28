@@ -1,0 +1,25 @@
+{
+  "name": "learnyounodees6",
+  "version": "1.0.0",
+  "description": "My attempts at learnyounode tutorials using as much es6 syntax as possible.",
+  "main": "learnyounode/ex1.js",
+  "dependencies": {
+    "async": "^2.1.4",
+    "learnyounode": "^3.5.8",
+    "request": "^2.79.0",
+    "through2-map": "^3.0.0"
+  },
+  "scripts": {
+    "start": "node node_modules/learnyounode/bin/learnyounode"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanx94/LearnYouNodeES6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethanx94/LearnYouNodeES6/issues"
+  },
+  "homepage": "https://github.com/ethanx94/LearnYouNodeES6#readme"
+}
