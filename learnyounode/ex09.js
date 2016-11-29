@@ -20,7 +20,7 @@ function getReq(callback) {
 // .whilst(): test, iteratee, [callback]
 async.whilst(
   () => i < 5,
-  callback => getReq(callback),
+  getReq,
   (err, results) => {
     if (err) return console.error(err);
     return results.map(item => console.log(item));
@@ -41,11 +41,10 @@ function getReq(arr, i, callback) {
 
 async.waterfall([
   callback => getReq([], 2, callback),
-  (arr, i, callback) => getReq(arr, i, callback),
-  (arr, i, callback) => getReq(arr, i, callback),
+  getReq,
+  getReq,
   (arr, callback) => callback(null, arr.map(item => console.log(item)))
 ], err => console.error(err));
-
 
 // Waterfall with helper methods (global vars)
 async.waterfall([
